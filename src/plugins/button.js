@@ -4,6 +4,10 @@ module.exports = plugin(function ({ addComponents, theme }) {
   const button = {
     '.btn': {
       padding: `${theme('spacing.1')} ${theme('spacing.2')}`,
+      lineHeight: 1.25,
+      transitionProperty: 'all',
+      transitionDuration: '300ms',
+      transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
     },
     ...Object.entries(theme('colors'))
       .map(([color, variants]) => ({
@@ -21,6 +25,22 @@ module.exports = plugin(function ({ addComponents, theme }) {
           color: `${variants['600']}`,
           '&:hover': {
             borderColor: `${variants['800']}`,
+            color: `${variants['800']}`,
+          },
+        },
+        [`.btn-ghost-${color}`]: {
+          backgroundColor: 'transparent',
+          boxShadow: 'none',
+          color: `${variants['600']}`,
+          '&:hover': {
+            boxShadow: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+            color: `${variants['800']}`,
+          },
+        },
+        [`.btn-icon-only-${color}`]: {
+          backgroundColor: 'transparent',
+          color: `${variants['600']}`,
+          '&:hover': {
             color: `${variants['800']}`,
           },
         },

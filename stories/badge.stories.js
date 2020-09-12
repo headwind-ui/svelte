@@ -1,20 +1,12 @@
-import { action } from '@storybook/addon-actions'
-import { Button } from '../src/index'
-import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+import { Badge } from '../src/index'
+import BadgeWithIcon from './BadgeWithIcon'
 export default {
-  title: 'Button',
-  Component: Button,
+  title: 'Badge',
+  Component: Badge,
   argTypes: {
-    buttonText: {
+    BadgeText: {
       type: 'string',
       control: 'text',
-    },
-    variant: {
-      type: 'string',
-      control: {
-        type: 'select',
-        options: ['default', 'secondary', 'ghost'],
-      },
     },
     color: {
       type: 'string',
@@ -43,12 +35,12 @@ export default {
 }
 
 export const Text = (args) => ({
-  Component: Button,
+  Component: Badge,
   props: args,
-  on: { click: action('clicked') },
 })
 export const TextWithIcon = (args) => ({
-  Component: Button,
-  props: { ...args, icon: faPlusCircle },
-  on: { click: action('clicked') },
+  Component: BadgeWithIcon,
+  props: {
+    ...args,
+  },
 })

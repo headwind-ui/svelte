@@ -6,7 +6,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build && npm run build:style",
+    "build:style": "postcss src/styles/style.css -o dist/styles.css",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "del-cli docs && build-storybook -c .storybook -o docs"
@@ -14,9 +15,15 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@rollup/plugin-node-resolve": "^6.0.0",
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-controls": "^6.0.21",
+    "@storybook/addon-docs": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
     "@storybook/addons": "^6.0.21",
     "@storybook/svelte": "^6.0.21",
@@ -27,11 +34,12 @@
     "del-cli": "^3.0.0",
     "jest": "^25.2.7",
     "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.2",
     "postcss-loader": "^3.0.0",
     "rollup": "^1.20.0",
     "rollup-plugin-svelte": "^5.0.0",
     "rollup-plugin-terser": "^5.3.0",
-    "svelte": "^3.20.1",
+    "svelte": "^3.23.2",
     "svelte-jester": "^1.0.5",
     "svelte-loader": "^2.13.6",
     "svelte-preprocess": "^4.2.1",
@@ -43,8 +51,5 @@
   "files": [
     "src",
     "dist"
-  ],
-  "dependencies": {
-    "@storybook/addon-docs": "^6.0.21"
-  }
+  ]
 }
