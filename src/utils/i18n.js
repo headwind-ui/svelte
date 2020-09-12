@@ -2,19 +2,11 @@
  * Translate Module
  */
 class i18n {
-  /**
-   *  @private {object} Locales Available
-   */
-  _locales = {}
-  /**
-   * @private {string} locale to translate if not exist in default locale
-   */
-  _fallback = null
-  /**
-   * @private {string} locale to translate if not specified in function call
-   */
-  _defaultLocale = null
-  constructor() {}
+  constructor() {
+    this._locales = {}
+    this._fallback = null
+    this._defaultLocale = null
+  }
   /**
    * add a locale and its values to module
    * @param {string} locale locale code
