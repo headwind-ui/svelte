@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="card">
+<div class="card {$$props.class}" on:click>
   <div class="card-preview">
     <slot name="preview" />
   </div>
