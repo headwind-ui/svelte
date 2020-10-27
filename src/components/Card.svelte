@@ -1,7 +1,10 @@
 <script>
+  import { classnames } from '../utils'
+
+  $: classes = classnames('card', $$props.class)
 </script>
 
-<div class="card {$$props.class}" on:click>
+<div class={classes} on:click>
   <div class="card-preview">
     <slot name="preview" />
   </div>

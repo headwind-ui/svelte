@@ -15,8 +15,16 @@ module.exports = plugin(function ({ addComponents, theme }) {
       transitionDuration: '300ms',
       lineHeight: 1,
       transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+      '& .card-preview': {
+        width: '100%',
+      },
       '& img': {
         objectFit: 'cover',
+        width: '100%',
+        height: 'auto',
+      },
+      '& .card-body': {
+        width: '100%',
       },
       '& [slot="title"]': {
         fontSize: theme('fontSize.lg'),

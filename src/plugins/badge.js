@@ -4,33 +4,37 @@ const plugin = require('tailwindcss/plugin')
 module.exports = plugin(function ({ addComponents, theme }) {
   const badge = {
     '.badge': {
-      display: 'flex',
-      width: 'fit-content',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontSize: theme('fontSize.xs'),
-      borderRadius: theme('borderRadius.full'),
-      padding: `${theme('spacing.1')} ${theme('spacing.2')}`,
-      transitionProperty: 'all',
-      transitionDuration: '300ms',
+      display: 'inline-block',
       lineHeight: 1,
-      transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
-      '& [slot="value"]': {
-        borderRadius: theme('borderRadius.full'),
-        width: `${theme('spacing.3')} !important`,
-        height: `${theme('spacing.3')} !important`,
+      borderRadius: theme('borderRadius.full'),
+      overflow: 'hidden',
+      '& span': {
         display: 'flex',
-        justifyContent: 'center',
+        width: 'fit-content',
         alignItems: 'center',
-        marginRight: theme('spacing.1'),
-        '& svg': {
-          width: `${theme('spacing.2')} !important`,
-          height: `${theme('spacing.2')} !important`,
+        justifyContent: 'center',
+        fontSize: theme('fontSize.xs'),
+        padding: `${theme('spacing.1')} ${theme('spacing.2')}`,
+        transitionProperty: 'all',
+        transitionDuration: '300ms',
+        transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        '& [slot="value"]': {
+          borderRadius: theme('borderRadius.full'),
+          width: `${theme('spacing.1')} !important`,
+          // height: `${theme('spacing.3')} !important`,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginRight: theme('spacing.1'),
+          '& svg': {
+            width: `${theme('spacing.2')} !important`,
+            height: `${theme('spacing.2')} !important`,
+          },
         },
-      },
-      '&.flex-row-reverse [slot="value"]': {
-        marginLeft: theme('spacing.1'),
-        marginRight: theme('spacing.0'),
+        '&.flex-row-reverse [slot="value"]': {
+          marginLeft: theme('spacing.1'),
+          marginRight: theme('spacing.0'),
+        },
       },
     },
     ...Object.entries(theme('colors'))

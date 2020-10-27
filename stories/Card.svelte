@@ -4,7 +4,7 @@
 
 <div class="w-1/6">
   <Card>
-    <img src="https://picsum.photos/300/200" alt="preview" slot="preview" />
+    <img src="https://picsum.photos/150/200" alt="preview" slot="preview" />
     <h1 slot="title" class="text-cyan-600">Title</h1>
     <p class="text-grey-400 text-sm text-justify">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto

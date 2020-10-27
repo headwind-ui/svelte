@@ -6,3 +6,9 @@
 <Badge BadgeText="check" {...$$props}>
   <span slot="value"><Icon icon={faCheck} /></span>
 </Badge>
+<Badge BadgeText="check" {...$$props}>
+  <span slot="value"><Icon icon={faCheck} /></span>
+</Badge>
+<Badge BadgeText="check" {...$$props}>
+  <span slot="value"><Icon icon={faCheck} /></span>
+</Badge>
