@@ -13,7 +13,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "del-cli docs && build-storybook -c .storybook -o docs",
     "release": "standard-version",
-    "postrelease": "git push --follow-tags origin master"
+    "postrelease": "git push --follow-tags origin master && npm publish"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

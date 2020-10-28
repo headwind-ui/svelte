@@ -67,7 +67,7 @@
     <div
       bind:this={menuElement}
       class={classnames(
-        'w-32 py-1 z-40 absolute m-1 bg-white shadow-md overflow-visible rounded',
+        'w-32 py-1 z-40 absolute m-1 shadow-md overflow-visible rounded',
         menuClass,
         { 'left-0': position === 'left', 'right-0': position === 'right' },
       )}

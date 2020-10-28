@@ -1,25 +1,25 @@
 <script>
-  import classnames from "../utils/classnames"
-  import Icon from "./Icon.svelte"
-  export let buttonText = "Button"
-  export let color = "cyan"
-  export let icon
+  import classnames from '../utils/classnames'
+  import Icon from './Icon.svelte'
+  export let buttonText = 'Button'
+  export let color = 'cyan'
+  export let icon = null
   /**
    * @type {'left'|'right'}
    */
-  export let iconPosition
+  export let iconPosition = null
   /**
    * @type {'default'|'secondary'|'ghost'}
    */
-  export let variant = "default"
-  export let href
+  export let variant = 'default'
+  export let href = null
   let { class: classNames, ...props } = $$props
-  const classes = classnames("btn", classNames, {
+  const classes = classnames('btn', classNames, {
     [`btn-${variant}-${color}`]: !!buttonText,
     [`btn-icon-only-${color}`]: !!(!buttonText && icon),
-    "flex items-center": !!(buttonText && icon),
-    "flex-row": iconPosition == "left",
-    "flex-row-reverse": iconPosition == "right",
+    'flex items-center': !!(buttonText && icon),
+    'flex-row': iconPosition == 'left',
+    'flex-row-reverse': iconPosition == 'right',
   })
 </script>
 

@@ -5,7 +5,7 @@
   /**
    * @type {'left'|'right'}
    */
-  export let iconPosition
+  export let iconPosition = ''
   const classesContainer = classnames('badge', `badge-${color}`, $$props.class)
   const classesBadge = classnames({
     'flex-row': iconPosition == 'left',
