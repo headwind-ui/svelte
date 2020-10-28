@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.5](https://github.com/headwind-ui/svelte/compare/v0.2.4...v0.2.5) (2020-10-28)
+
+
+### Bug Fixes
+
+* add optional props to componets ([d7536c0](https://github.com/headwind-ui/svelte/commit/d7536c0ab70f80ee220448c86443049c8d3e0229))
+
 ### [0.2.4](https://github.com/headwind-ui/svelte/compare/v0.2.3...v0.2.4) (2020-10-27)
 
 ### [0.2.3](https://github.com/headwindUI/svelte/compare/v0.2.2...v0.2.3) (2020-09-13)
