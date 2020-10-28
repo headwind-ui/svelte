@@ -8,6 +8,10 @@ module.exports = plugin(function ({ addComponents, theme }) {
       transitionProperty: 'all',
       transitionDuration: '300ms',
       transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+      '&[disabled]': {
+        pointerEvents: 'none',
+        opacity: 0.6,
+      },
     },
     ...Object.entries(theme('colors'))
       .map(([color, variants]) => ({
