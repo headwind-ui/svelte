@@ -13,7 +13,7 @@
       veritatis!
     </p>
     <div slot="actions">
-      <Button buttonText="action 1" />
+      <Button buttonText="action 1" disabled />
       <Button buttonText="action 2" />
     </div>
   </Card>
