@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.7](https://github.com/headwind-ui/svelte/compare/v0.2.6...v0.2.7) (2020-10-28)
+
+
+### Bug Fixes
+
+* **button:** fix button disabled style ([41e3a1e](https://github.com/headwind-ui/svelte/commit/41e3a1e17ec704b832e822bf25a8eb8e622abe61))
+
 ### [0.2.6](https://github.com/headwind-ui/svelte/compare/v0.2.5...v0.2.6) (2020-10-28)
 
 ### [0.2.5](https://github.com/headwind-ui/svelte/compare/v0.2.4...v0.2.5) (2020-10-28)
